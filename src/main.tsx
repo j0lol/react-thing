@@ -1,14 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './assets/css/index.css'
-import App from './components/App/App.tsx'
-import Root from './components/Root/Root.tsx';
-import { registerRuntimeErrorListener } from "./hmrOverlay.ts";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./assets/css/index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { registerRuntimeErrorListener } from "./hmrOverlay";
+import { routes } from "./routes.tsx";
 
 registerRuntimeErrorListener();
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Root />
-  </StrictMode>,
-)
+const router = createBrowserRouter(routes);
+
+createRoot(document.getElementById("root")!).render(
+	<StrictMode>
+		<RouterProvider router={router} />
+	</StrictMode>,
+);
