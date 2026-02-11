@@ -2,3 +2,8 @@
 	width: 100%;
 	background: #f90;
 }
+
+ul {
+	margin: 0;
+	padding: 0;
+}

@@ -1,0 +1,18 @@
+.item {
+    
+    display: flex;
+    background: lightgray;
+    padding: 1em;
+    margin: 0.5em;
+    gap: 1em;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.fav {
+    background-color: gold;
+}
