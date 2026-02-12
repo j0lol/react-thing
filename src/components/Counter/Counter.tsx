@@ -11,6 +11,7 @@ function Counter() {
       <p>{num}</p>
 
       <button onClick={() => setNum((num) => num + 1)}>Inc</button>
+      <button onClick={() => setNum((_) => 0)}>Reset</button>
       <button onClick={() => setNum((num) => num - 1)}>Dec</button>
     </div>
   );
