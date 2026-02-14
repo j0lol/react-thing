@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.birthday {
+  display: block;
+  padding: 0.5em;
+  background: linear-gradient(
+    to right in hsl longer hue,
+    hsl(0deg 100% 80%),
+    hsl(0deg 100% 80%)
+  );
+  text-shadow: 1px 1px 0 white;
+}

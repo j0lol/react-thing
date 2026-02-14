@@ -6,6 +6,7 @@ function SiteNav() {
     { label: "Home", url: "/" },
     { label: "About", url: "/about" },
     { label: "Counter", url: "/counter" },
+    { label: "Form", url: "/form" },
   ];
   return (
     <div className={styles.wrapper}>
