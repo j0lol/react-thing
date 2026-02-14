@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border: 1px solid grey;
+}
+
+.topBit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  border: 1px solid green;
+}
+
+.date {
+  font-style: italic;
+  color: darkgray;
+}
+
+.icon {
+  display: block;
+  width: 3em;
+  height: 3em;
+  border-radius: 99999px;
+}
