@@ -10,7 +10,7 @@ function sample<T>(array: Array<T>) {
 const names = ["Foo Bar", "John Foo", "Alice Bob", "I'm Notverygoodatcomingupwithnames", "Rhea Act"];
 const message = () => ("lorem".repeat(Math.random() * 10 + 1));
 const hue = () => (Math.floor(Math.random() * 361));
-const time = () => (Temporal.Now.plainDateTimeISO().toString());
+const time = () => (Temporal.Now.instant());
 
 function NotTwitter() {
   let [post, setPost] = useState<PostProps[]>([]);
