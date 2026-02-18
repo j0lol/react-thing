@@ -3,8 +3,9 @@ import styles from "./SiteNav.module.css";
 
 function SiteNav() {
   const navLinks = [
-    { label: "Home", url: "/" },
     { label: "About", url: "/about" },
+    { label: "Feed (Zustand)", url: "/" },
+    { label: "Feed (Redux Toolkit)", url: "/redux" },
     { label: "Counter", url: "/counter" },
     { label: "Form", url: "/form" },
     { label: "Social", url: "/social" },

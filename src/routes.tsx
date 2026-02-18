@@ -2,6 +2,7 @@ import About from "./components/About/About";
 import Counter from "./components/Counter/Counter";
 import FormDemo from "./components/FormDemo/FormDemo";
 import { Home } from "./components/Home/Home";
+import { HomeReduxToolkit } from "./components/Home/HomeReduxToolkit";
 import NotTwitter from "./components/NotTwitter/NotTwitter";
 import Root from "./components/Root/Root";
 
@@ -29,6 +30,10 @@ const routes = [
       {
         path: "social",
         element: <NotTwitter />,
+      },
+      {
+        path: "redux",
+        element: <HomeReduxToolkit />,
       },
     ],
   },
