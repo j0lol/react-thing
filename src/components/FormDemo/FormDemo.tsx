@@ -39,15 +39,13 @@ function FormDemo() {
 
   return (
     <div className={styles.wrapper}>
-      <p>FormDemo</p>
-
       <form onSubmit={handleSubmit}>
         <label>
           Birthday:&nbsp;
           <input name="birthday" type="date" />
         </label>
 
-        <input type="submit" />
+        <input type="submit" value="Get days until birthday" />
       </form>
 
       <output className={styles.birthday}>

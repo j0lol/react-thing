@@ -63,14 +63,16 @@ function Post({ message, name, date, hue }: PostProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.topBit}>
-        <div
-          className={styles.icon}
-          style={{
-            backgroundColor: `hsl(${hue!}deg 100% 50%)`,
-          }}
-        >
+        <div className={styles.faceBit}>
+          <div
+            className={styles.icon}
+            style={{
+              backgroundColor: `oklch(1 30% ${hue!}deg)`,
+            }}
+          >
+          </div>
+          <div className={styles.name}>{name}</div>
         </div>
-        <div className={styles.name}>{name}</div>
         <div className={styles.date}>
           {dur
             ? formatRelative(Temporal.Instant.from(date))

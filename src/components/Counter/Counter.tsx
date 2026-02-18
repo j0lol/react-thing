@@ -6,13 +6,16 @@ function Counter() {
 
   return (
     <div className={styles.wrapper}>
-      <p>Counter</p>
+      <div className={styles.counter}>
+        <div className={styles.display}>
+          <span className={styles.under}>88888888</span>
+          <span className={styles.over}>{num}</span>
+        </div>
 
-      <p>{num}</p>
-
-      <button onClick={() => setNum((num) => num + 1)}>Inc</button>
-      <button onClick={() => setNum((_) => 0)}>Reset</button>
-      <button onClick={() => setNum((num) => num - 1)}>Dec</button>
+        <button onClick={() => setNum((num) => num + 1)}>Inc</button>
+        <button onClick={() => setNum((_) => 0)}>Reset</button>
+        <button onClick={() => setNum((num) => num - 1)}>Dec</button>
+      </div>
     </div>
   );
 }

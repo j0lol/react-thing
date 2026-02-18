@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "DSEG";
+  src: url("/DSEG7ClassicMini-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.counter {
+  width: min(100%, 40em);
+  border: 1px solid black;
+  padding: 1em;
+  margin: 1em;
+}
+
+.display {
+  box-sizing: content-box;
+  width: 6em;
+  height: 1.7ch;
+  position: relative;
+  background: #9aaa8d;
+  border: 4px inset #9aaa8d;
+  color: black;
+  text-align: right;
+  /* text-shadow: 2px 2px 0 rgba(0 0 0 / 20%); */
+  padding: 0.3em;
+  font-family: "DSEG", monospace;
+  margin-bottom: 1em;
+  margin-right: -1em;
+  font-size: 2em;
+}
+
+.under {
+  position: absolute;
+  right: 0;
+  color: rgba(0 0 0 / 20%);
+  text-align: right;
+}
+
+.over {
+  position: absolute;
+  right: 0;
+  color: black;
+  text-align: right;
+}

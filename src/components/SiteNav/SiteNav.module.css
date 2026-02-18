@@ -1,25 +1,29 @@
 .wrapper {
-	padding: 1rem;
-	border: 1px solid lightgray;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: lightgrey;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightslategrey;
 }
 
 .links {
-	display: flex;
+  display: flex;
+  overflow: scroll;
 }
 
 .activeLink,
 .inactiveLink {
-	padding: 0 2rem;
+  padding: 0 2rem;
 }
 
 .activeLink {
-	color: #000;
+  color: oklch(from var(--accent) calc(l + 0.3) c h);
 }
 
 .inactiveLink {
-	color: #666;
+  color: whitesmoke;
+}
+
+:is(.activeLink, .inactiveLink):hover {
+  color: var(--accent);
 }

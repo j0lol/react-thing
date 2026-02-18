@@ -1,17 +1,19 @@
 @import url("uaplus.css");
 
 :root {
-	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-	color-scheme: light dark;
+  color-scheme: light dark;
+
+  --accent: #61dafb;
 }
 
 body {
-	display: flex;
-	width: 100%;
-	min-height: 100vh;
-	margin: 0;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
 }
 #root {
-	width: 100%;
+  width: 100%;
 }

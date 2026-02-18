@@ -8,9 +8,18 @@ function sample<T>(array: Array<T>) {
 }
 
 const names = ["Foo Bar", "John Foo", "Alice Bob", "I'm Notverygoodatcomingupwithnames", "Rhea Act"];
-const message = () => ("lorem".repeat(Math.random() * 10 + 1));
 const hue = () => (Math.floor(Math.random() * 361));
 const time = () => (Temporal.Now.instant());
+
+const repeatWithSpace = (str: string, times: number): string => {
+  if (times <= 0) {
+    return str;
+  } else {
+    return str + " " + repeatWithSpace(str, times - 1);
+  }
+};
+
+const message = () => (repeatWithSpace("lorem", Math.random() * 25 + 1));
 
 function NotTwitter() {
   let [post, setPost] = useState<PostProps[]>([]);

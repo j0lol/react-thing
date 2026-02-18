@@ -1,9 +1,12 @@
 .wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 1rem;
-	color: white;
-	background: grey;
-	border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: white;
+  background: slategray;
+
+  a:visited {
+    color: oklch(from rebeccapurple calc(l + 0.4) calc(c + 0.2) h);
+  }
 }
