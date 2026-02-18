@@ -1,4 +1,4 @@
-import { type FormEvent, useState } from "react";
+import { useState } from "react";
 import { Temporal } from "temporal-polyfill"; // Required because as of writing, Temporal is unavailable in Safari
 import styles from "./FormDemo.module.css";
 
@@ -27,7 +27,7 @@ function FormDemo() {
     }
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: any) {
     e.preventDefault();
 
     const form = e.target as HTMLFormElement;
