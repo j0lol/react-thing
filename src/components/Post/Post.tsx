@@ -1,20 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Temporal } from "temporal-polyfill";
 import styles from "./Post.module.css";
 
 interface PostProps {
-  message: String;
-  name: String;
-  date: Temporal.PlainDateTime;
+  id: number;
+  message: string;
+  name: string;
+  date: string;
   hue: number;
 }
 function Post({ message, name, date, hue }: PostProps) {
   let [dur, setDur] = useState<Temporal.Duration | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval>>(0);
 
   useEffect(() => {
-    let now = Temporal.Now.plainDateTimeISO();
-    setDur(date.since(now));
-  });
+    const update = () => {
+      let now = Temporal.Now.plainDateTimeISO();
+      setDur(Temporal.PlainDateTime.from(date).since(now));
+    };
+
+    update();
+    intervalRef.current = setInterval(update, 1000);
+    return () => clearInterval(intervalRef.current);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
